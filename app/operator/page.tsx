@@ -1,0 +1,1 @@
+import Console from './console';export const metadata={robots:{index:false,follow:false}};export default function Page(){return <section className="section"><span className="eyebrow">AUTHORIZED OPERATIONS</span><h1>Operations console.</h1><p>Private operator access required. No data is loaded before authorization.</p><Console/></section>}

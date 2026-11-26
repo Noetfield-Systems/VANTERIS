@@ -1,0 +1,1 @@
+import Portal from './portal';export default function Page(){return <section className="section"><span className="eyebrow">PRIVATE CLIENT AREA</span><h1>Your engagement, in view.</h1><p>Enter the private access token provided by your assigned contact. Access is limited to your own engagement.</p><Portal/></section>}
