@@ -38,6 +38,13 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   assert.equal((await hub(t1.data.token,{kind:'accept_agreement',id:agreement.data.id,name:'CI Alpha',confirm:true})).status,200);
   const doc=await hub(operator,{kind:'document',lead_id:a.data.id,title:'CI deliverable',body:'Fixture text document'});assert.equal(doc.status,201);assert.equal((await hubView(t2.data.token)).data.documents.length,0);
   const ac=await call('/api/acquisition',{token:operator});assert.equal(ac.status,200);assert.equal(ac.data.records.length,45);assert.equal((await call('/api/acquisition',{token:t1.data.token})).status,401);assert.equal((await call('/api/acquisition',{method:'POST',token:operator,body:{action:'event',record_id:ac.data.records[0].id,event_type:'sent',body:'Unverified fixture'}})).status,400);
+  const uploadFile=async(token,lead_id,name='fixture.txt',content='CI private file',type='text/plain')=>{const form=new FormData();if(lead_id)form.set('lead_id',lead_id);form.set('file',new Blob([content],{type}),name);const r=await fetch(base+'/api/client-files',{method:'POST',headers:{Authorization:'Bearer '+token},body:form});return {status:r.status,data:await r.text()}};
+  const f=await uploadFile(t1.data.token,b.data.id);assert.equal(f.status,201);const fileId=JSON.parse(f.data).id;
+  assert.equal((await call('/api/client-files',{token:t1.data.token})).data.files.length,1);
+  assert.equal((await call('/api/client-files',{token:t2.data.token})).data.files.length,0);
+  assert.equal((await call('/api/client-files?id='+fileId,{token:t2.data.token})).status,404);
+  const dl=await fetch(base+'/api/client-files?id='+fileId,{headers:{Authorization:'Bearer '+t1.data.token}});assert.equal(dl.status,200);assert.equal(await dl.text(),'CI private file');assert.match(dl.headers.get('content-disposition'),/attachment/);
+  assert.equal((await uploadFile(operator,a.data.id,'bad.pdf','not PDF','application/pdf')).status,415);
   assert.equal((await op({kind:'revoke_portal',lead_id:a.data.id})).status,200);assert.equal((await view(t1.data.token)).status,401);
   for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/operator/client-hub','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
 });
