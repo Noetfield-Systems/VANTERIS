@@ -1,0 +1,1 @@
+export function verify(raw:string,header:string|null,secret:string|undefined,now?:number):boolean;

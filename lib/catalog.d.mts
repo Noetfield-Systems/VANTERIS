@@ -1,0 +1,11 @@
+export type Service={id:string,title:string,description:string,deliverable:string,mode:string};
+export const services:Service[];
+export const industries:[string,string[]][];
+export const goals:[string,string[]][];
+export const offers:{id:string,title:string,amount:number,duration:string,deliverable:string}[];
+export const jurisdictions:[string,string,string][];
+export const stages:string[];
+export function route(goal:string,industry:string):Service[];
+export function getOffer(id:string):typeof offers[number]|undefined;
+export function validLead(x:unknown):boolean;
+export function matchPayment(s:any,o:any):boolean;

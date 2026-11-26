@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function Payment(){return <section className="section"><h1>Payment status.</h1><p>A checkout return is not proof of payment. Your transaction is recorded only after provider verification. If you completed payment, retain the provider receipt.</p><Link href="/consultation">Return to enquiries ↗</Link></section>}
