@@ -50,3 +50,5 @@ CREATE INDEX IF NOT EXISTS acquisition_stage_idx ON acquisition_records(kind,sta
 
 CREATE TABLE IF NOT EXISTS client_files(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),file_name text NOT NULL,media_type text NOT NULL CHECK(media_type IN ('application/pdf','image/png','image/jpeg','text/plain')),size_bytes integer NOT NULL CHECK(size_bytes BETWEEN 1 AND 2097152),checksum text NOT NULL CHECK(length(checksum)=64),uploaded_by text NOT NULL CHECK(uploaded_by IN ('client','operator')),payload bytea NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),CHECK(octet_length(payload)=size_bytes));
 CREATE INDEX IF NOT EXISTS client_files_lead_idx ON client_files(lead_id,created_at DESC);
+
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS attribution jsonb NOT NULL DEFAULT '{}'::jsonb;

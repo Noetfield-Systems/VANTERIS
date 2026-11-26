@@ -1,0 +1,74 @@
+[
+  {
+    "id": "consult",
+    "tag": "01 / DECISION SESSION",
+    "name": "Technical business consultation",
+    "headline": "Get clarity before committing capital.",
+    "audience": "Founders and operators with a defined fintech or technology question.",
+    "includes": [
+      "60-minute working session",
+      "Written summary of decisions and open questions",
+      "Prioritized next actions and relevant service pathways"
+    ],
+    "inputs": "A short project brief, target market and key questions.",
+    "excludes": "Legal opinion, licensing application, code implementation and external specialist fees.",
+    "acceptance": "One session and written action summary delivered.",
+    "next": "Request a session",
+    "goal": "Custom advisory",
+    "industry": "Web3 startups"
+  },
+  {
+    "id": "market",
+    "tag": "02 / MARKET ENTRY",
+    "name": "Market entry research",
+    "headline": "Compare two markets before you expand.",
+    "audience": "Fintech founders and established businesses evaluating two target jurisdictions.",
+    "includes": [
+      "Comparison of two agreed markets",
+      "Official-source register and activity-specific questions",
+      "Operating dependencies, unresolved assumptions and next-step checklist"
+    ],
+    "inputs": "Business model, two target jurisdictions, intended activities and launch timeline.",
+    "excludes": "Legal opinions, definitive licence eligibility, company filing, tax advice and government fees.",
+    "acceptance": "Two-market comparison and source register delivered and reviewed.",
+    "next": "Request a market brief",
+    "goal": "Enter a new market",
+    "industry": "International SMEs"
+  },
+  {
+    "id": "roadmap",
+    "tag": "03 / LAUNCH STRATEGY",
+    "name": "Fintech launch roadmap",
+    "headline": "Turn an ambitious launch into an executable plan.",
+    "audience": "Founders preparing a payments, digital banking, wallet, trading or other fintech business.",
+    "includes": [
+      "Business and product dependency map",
+      "High-level funds-flow and operating model",
+      "Prioritized implementation backlog, decision owners and launch sequence"
+    ],
+    "inputs": "Product brief, intended users, budget range, target markets and existing systems.",
+    "excludes": "Code delivery, fundraising, regulatory approvals, vendor charges and licensed legal advice.",
+    "acceptance": "Written roadmap, assumptions and agreed next milestones delivered.",
+    "next": "Request a launch roadmap",
+    "goal": "Launch a business",
+    "industry": "Payment institutions"
+  },
+  {
+    "id": "architecture",
+    "tag": "04 / TECHNICAL REVIEW",
+    "name": "Technology architecture assessment",
+    "headline": "Identify expensive infrastructure risks early.",
+    "audience": "Teams selecting, building or upgrading fintech infrastructure.",
+    "includes": [
+      "Review of agreed system architecture and integrations",
+      "Findings register prioritized by impact and dependency",
+      "Technical recommendations and an implementation plan"
+    ],
+    "inputs": "Non-sensitive architecture diagrams, integration inventory and target requirements.",
+    "excludes": "Penetration testing, certification, live deployment, remediation and third-party subscriptions.",
+    "acceptance": "Findings and recommendations delivered for the agreed architecture scope.",
+    "next": "Request an architecture review",
+    "goal": "Technology infrastructure",
+    "industry": "Enterprise financial institutions"
+  }
+]
