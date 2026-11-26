@@ -1,0 +1,326 @@
+[
+  {
+    "id": "canada",
+    "country": "Canada",
+    "authority": "FINTRAC",
+    "url": "https://fintrac-canafe.canada.ca/msb-esm/register-inscrire/reg-ins-eng",
+    "summary": "MSB and foreign MSB registration is an activity-specific federal process. Registration is not regulatory endorsement.",
+    "next": "Review actual money services and other federal/provincial requirements.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "united-states",
+    "country": "United States",
+    "authority": "FinCEN",
+    "url": "https://www.fincen.gov/resources/money-services-business-msb-registration",
+    "summary": "MSBs may have federal registration obligations; applicable state requirements are separate.",
+    "next": "Map money transmission, states, agents and exemptions with counsel.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "united-kingdom",
+    "country": "United Kingdom",
+    "authority": "FCA",
+    "url": "https://www.fca.org.uk/firms/apply-emoney-payment-institution",
+    "summary": "Payment and electronic money institutions have different authorisation and registration routes.",
+    "next": "Determine activities and applicable category; review safeguarding and application requirements.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "uae",
+    "country": "UAE",
+    "authority": "CBUAE",
+    "url": "https://rulebook.centralbank.ae/en/rulebook/retail-payment-services-and-card-schemes-regulation",
+    "summary": "Retail payment services and card schemes are subject to a specific regulatory framework.",
+    "next": "Identify activity and relevant mainland or free-zone authority; confirm exemptions.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "singapore",
+    "country": "Singapore",
+    "authority": "MAS",
+    "url": "https://www.mas.gov.sg/regulation/payments/licensing-for-payment-service-providers",
+    "summary": "The Payment Services Act framework includes activity-specific licensing and thresholds.",
+    "next": "Map proposed services, volumes and licence category.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "hong-kong",
+    "country": "Hong Kong",
+    "authority": "SFC",
+    "url": "https://www.sfc.hk/en/Welcome-to-the-Fintech-Contact-Point/Virtual-assets/Virtual-asset-trading-platforms-operators%E2%81%A0",
+    "summary": "Centralised virtual asset platforms operating in Hong Kong or actively marketing to its investors require SFC licensing under the relevant regime.",
+    "next": "Confirm trading model and additional authorities for non-trading payment activities.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "switzerland",
+    "country": "Switzerland",
+    "authority": "FINMA",
+    "url": "https://www.finma.ch/en/authorisation/fintech/fintech-bewilligung/",
+    "summary": "The FinTech licence has specific corporate form and Swiss operating requirements.",
+    "next": "Assess public deposits, custody, DLT trading and alternative permissions.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "estonia",
+    "country": "Estonia",
+    "authority": "Finantsinspektsioon",
+    "url": "https://fi.ee/en/news/transitional-period-providers-crypto-asset-services-has-ended",
+    "summary": "The regulator reports that from July 2026 crypto asset services require MiCA authorisation from an eligible EEA authority.",
+    "next": "Confirm authorised activities, passporting and local establishment requirements.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "lithuania",
+    "country": "Lithuania",
+    "authority": "Bank of Lithuania",
+    "url": "https://www.lb.lt/en/authorisation-of-electronic-money-institutions",
+    "summary": "An electronic money institution may provide specified payment services under its licence.",
+    "next": "Compare EMI and PI scope, capital, governance and cross-border permissions.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "malta",
+    "country": "Malta",
+    "authority": "MFSA",
+    "url": "https://www.mfsa.mt/our-work/authorisations/",
+    "summary": "MFSA provides authorisation pathways for regulated financial activities including crypto-asset service providers.",
+    "next": "Check relevant activity, MiCA application and cross-border notification.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "cyprus",
+    "country": "Cyprus",
+    "authority": "CySEC",
+    "url": "https://www.cysec.gov.cy/en-GB/entities/Crypto-Assets-Entities-%28MiCAR%29/MiCAR-CASPs/Licensees-%28Article-63%29/",
+    "summary": "CySEC publishes authorised MiCAR crypto-asset service providers.",
+    "next": "Confirm applicable authorisation and relevant authority for payment activities.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "poland",
+    "country": "Poland",
+    "authority": "KNF",
+    "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/krajowe_instytucje_platnicze/wstep",
+    "summary": "National payment institution activity requires prior KNF permission.",
+    "next": "Review payment activity, applicable exemptions and application documents.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "germany",
+    "country": "Germany",
+    "authority": "BaFin / Bundesbank",
+    "url": "https://www.bundesbank.de/en/tasks/financial-supervision/individual-aspects/payment-institutions-and-e-money-institutions-622962",
+    "summary": "Commercial payment institution services in Germany generally require written BaFin authorisation under ZAG.",
+    "next": "Assess service scope, technical provider exceptions and separate crypto rules.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "australia",
+    "country": "Australia",
+    "authority": "AUSTRAC",
+    "url": "https://www.austrac.gov.au/new-austrac/register-us/register-us-remittance-or-virtual-asset-service-provider",
+    "summary": "AUSTRAC provides registration pathways for remittance and virtual asset service providers.",
+    "next": "Review applicable registration and other ASIC or financial services permissions.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "cayman-islands",
+    "country": "Cayman Islands",
+    "authority": "CIMA",
+    "url": "https://www.cima.ky/registration-requirements",
+    "summary": "CIMA requires an application for entities wishing to provide virtual asset services under its framework.",
+    "next": "Determine registration versus licensing category and current requirements.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "bvi",
+    "country": "BVI",
+    "authority": "FSC",
+    "url": "https://www.bvifsc.vg/library/guidance-application-registration-virtual-assets-service-provider",
+    "summary": "FSC publishes application guidance for virtual asset service provider registration.",
+    "next": "Map services performed in or from the BVI and relevant registration category.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "mauritius",
+    "country": "Mauritius",
+    "authority": "FSC",
+    "url": "https://www.fscmauritius.org/licensing-supervision/licensing/licensed-activities",
+    "summary": "FSC lists licensed financial activities including virtual asset service providers.",
+    "next": "Confirm licence category and local management and capital requirements.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  },
+  {
+    "id": "seychelles",
+    "country": "Seychelles",
+    "authority": "FSA",
+    "url": "https://fsaseychelles.sc/vasp/legal-framework",
+    "summary": "FSA publishes the VASP licensing and ongoing requirements framework.",
+    "next": "Assess nexus, eligible entity form, fees and specific licence category.",
+    "reviewed": "2026-11-26",
+    "status": "official-source initial review",
+    "scope": "Activity-specific research starting point; not legal advice or an exhaustive market dossier.",
+    "unknowns": [
+      "Entity form and registrar requirements",
+      "Ownership and local management",
+      "Capital and official fees",
+      "Activity-specific exclusions and other authorities",
+      "Qualified local specialist availability"
+    ]
+  }
+]

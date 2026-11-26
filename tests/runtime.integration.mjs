@@ -25,6 +25,10 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   assert.equal((await invoice(6000)).status,201);assert.equal((await invoice(5000)).status,409);assert.equal((await invoice(4000)).status,201);
   assert.equal((await view(t1.data.token)).data.invoices.length,2);assert.equal((await view(t2.data.token)).data.invoices.length,0);
   assert.equal((await call('/api/checkout',{method:'POST',body:{...lead('CI Checkout','checkout@example.invalid'),offer:'consult'}})).status,503);
+  const task=await call('/api/delivery',{method:'POST',token:operator,body:{kind:'task',lead_id:a.data.id,title:'CI onboarding',description:'Provide non-sensitive requirements'}});assert.equal(task.status,201);
+  const deliver=token=>call('/api/delivery',{token});assert.equal((await deliver(t1.data.token)).data.tasks.length,1);assert.equal((await deliver(t2.data.token)).data.tasks.length,0);
+  const respond=token=>call('/api/delivery',{method:'POST',token,body:{kind:'task_response',id:task.data.id,response:'CI fixture response'}});assert.equal((await respond(t2.data.token)).status,409);assert.equal((await respond(t1.data.token)).status,200);
+  const ticket=await call('/api/delivery',{method:'POST',token:t1.data.token,body:{kind:'ticket',subject:'CI support',body:'CI fixture question'}});assert.equal(ticket.status,201);assert.equal((await deliver(t2.data.token)).data.tickets.length,0);
   assert.equal((await op({kind:'revoke_portal',lead_id:a.data.id})).status,200);assert.equal((await view(t1.data.token)).status,401);
-  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
+  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
 });
