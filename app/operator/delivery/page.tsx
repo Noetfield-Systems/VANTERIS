@@ -1,0 +1,1 @@
+import Delivery from './workspace';export const metadata={robots:{index:false,follow:false}};export default function Page(){return <section className="section"><span className="eyebrow">PRIVATE OPERATIONS / DELIVERY</span><h1>Project delivery.</h1><p>Assign milestones and onboarding tasks, review evidence and answer client support.</p><Delivery/></section>}

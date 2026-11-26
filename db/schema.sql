@@ -19,3 +19,10 @@ ALTER TABLE orders ADD COLUMN IF NOT EXISTS invoice_id uuid REFERENCES invoices(
 CREATE UNIQUE INDEX IF NOT EXISTS orders_invoice_once ON orders(invoice_id) WHERE invoice_id IS NOT NULL;
 CREATE TABLE IF NOT EXISTS intelligence(id uuid PRIMARY KEY,title text NOT NULL,source_url text NOT NULL,publisher text NOT NULL,published_at date,retrieved_at timestamptz DEFAULT now(),verification text NOT NULL CHECK(verification IN ('unreviewed','verified','rejected')),category text NOT NULL,market text NOT NULL,summary text NOT NULL,next_action text NOT NULL,owner text NOT NULL);
 CREATE TABLE IF NOT EXISTS expenses(id uuid PRIMARY KEY,project_id uuid REFERENCES projects(id),category text NOT NULL CHECK(category IN ('internal','external')),amount integer NOT NULL CHECK(amount>0),currency text NOT NULL DEFAULT 'cad',description text NOT NULL,evidence text NOT NULL,incurred_at date NOT NULL,created_at timestamptz DEFAULT now());
+
+CREATE TABLE IF NOT EXISTS milestones(id uuid PRIMARY KEY,project_id uuid NOT NULL REFERENCES projects(id),title text NOT NULL,description text NOT NULL,due_at date,status text NOT NULL DEFAULT 'planned' CHECK(status IN ('planned','in_progress','review','accepted')),evidence text,created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS client_tasks(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,description text NOT NULL,status text NOT NULL DEFAULT 'open' CHECK(status IN ('open','submitted','accepted')),response text,created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS support_tickets(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),subject text NOT NULL,body text NOT NULL,status text NOT NULL DEFAULT 'open' CHECK(status IN ('open','answered','closed')),reply text,created_at timestamptz DEFAULT now());
+CREATE INDEX IF NOT EXISTS milestones_project_idx ON milestones(project_id);
+CREATE INDEX IF NOT EXISTS tasks_lead_idx ON client_tasks(lead_id);
+CREATE INDEX IF NOT EXISTS support_lead_idx ON support_tickets(lead_id);

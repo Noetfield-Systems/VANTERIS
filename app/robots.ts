@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';export default function robots():MetadataRoute.Robots{const base=process.env.PUBLIC_BASE_URL;return {rules:{userAgent:'*',allow:'/',disallow:['/operator','/portal','/api/','/payment']},...(base?{sitemap:base.replace(/\/$/,'')+'/sitemap.xml'}:{})}}
