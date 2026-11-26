@@ -1,0 +1,2 @@
+# Temporary development hosting
+Founder authorized temporary Vercel hosting on 2026-11-26. Separate project vanteris-global-advisory in the available 777 Foundation workspace; hosting does not establish legal ownership. Commerce disabled; no production customer records or merchant credentials. GitHub repository is the source of truth. Migrate to a dedicated workspace and database later. First deployment dpl_DFfnQHJL779PpPhac1KNNe2EGnjJ. Vercel authentication is enabled by default. Development must not be mistaken for live commerce.
