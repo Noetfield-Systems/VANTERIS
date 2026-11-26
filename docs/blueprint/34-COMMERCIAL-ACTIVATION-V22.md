@@ -1,0 +1,2 @@
+# V2.2 commercial activation
+Four canonical prices retained; all four detailed engagement pages and custom proposal route. Campaign attribution records validated UTM values on lead intake, no ad pixels or tracking of personal identities. Checkout UI reflects actual server configuration; enquiry remains enabled. Source assets, 12 draft campaign variants, sales scripts, profile, launch checklist and proposed test budget in docs/commercial. No messages sent or spend committed. All other service routes retained. Migration adds a jsonb attribution column before production deploy.
