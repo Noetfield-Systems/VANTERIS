@@ -6,9 +6,9 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   assert.equal((await call('/api/health')).status,200);
   assert.equal((await call('/api/operator')).status,401);
   assert.equal((await call('/api/lead',{method:'POST',body:{}})).status,400);
-  const a=await call('/api/lead',{method:'POST',body:lead('CI Alpha','alpha@example.invalid')});
+  const a=await call('/api/lead',{method:'POST',body:{...lead('CI Alpha','alpha@example.invalid'),attribution:{utm_source:'linkedin',utm_campaign:'launch-roadmap',email:'ignore'}}});
   const b=await call('/api/lead',{method:'POST',body:lead('CI Beta','beta@example.invalid')});
-  assert.equal(a.status,201);assert.equal(b.status,201);
+  assert.equal(a.status,201);assert.equal(b.status,201);const crm=await call('/api/operator',{token:operator});assert.deepEqual(crm.data.leads.find(x=>x.id===a.data.id).attribution,{utm_source:'linkedin',utm_campaign:'launch-roadmap'});
   const op=body=>call('/api/operations',{method:'POST',token:operator,body});
   const starts=new Date(Date.now()+86400000).toISOString(),ends=new Date(Date.now()+90000000).toISOString();
   const slot=await op({kind:'slot',starts_at:starts,ends_at:ends});assert.equal(slot.status,201);
@@ -46,5 +46,5 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   const dl=await fetch(base+'/api/client-files?id='+fileId,{headers:{Authorization:'Bearer '+t1.data.token}});assert.equal(dl.status,200);assert.equal(await dl.text(),'CI private file');assert.match(dl.headers.get('content-disposition'),/attachment/);
   assert.equal((await uploadFile(operator,a.data.id,'bad.pdf','not PDF','application/pdf')).status,415);
   assert.equal((await op({kind:'revoke_portal',lead_id:a.data.id})).status,200);assert.equal((await view(t1.data.token)).status,401);
-  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/operator/client-hub','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
+  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/operator/client-hub','/engagements','/engagements/consult','/engagements/market','/engagements/roadmap','/engagements/architecture','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
 });
