@@ -5,3 +5,11 @@ CREATE TABLE IF NOT EXISTS partners(id uuid PRIMARY KEY,company text NOT NULL,co
 CREATE TABLE IF NOT EXISTS projects(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,status text NOT NULL DEFAULT 'Discovery',next_milestone text,created_at timestamptz DEFAULT now());
 CREATE TABLE IF NOT EXISTS audit_log(id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,entity_id uuid,action text NOT NULL,created_at timestamptz DEFAULT now());
 CREATE INDEX IF NOT EXISTS leads_stage_idx ON leads(stage,created_at);
+
+CREATE TABLE IF NOT EXISTS booking_slots(id uuid PRIMARY KEY,starts_at timestamptz NOT NULL UNIQUE,ends_at timestamptz NOT NULL,created_at timestamptz DEFAULT now(),CHECK(ends_at>starts_at));
+CREATE TABLE IF NOT EXISTS bookings(id uuid PRIMARY KEY,slot_id uuid NOT NULL UNIQUE REFERENCES booking_slots(id),lead_id uuid NOT NULL REFERENCES leads(id),created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS portal_tokens(token_hash text PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),expires_at timestamptz NOT NULL,revoked_at timestamptz);
+CREATE TABLE IF NOT EXISTS proposals(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,scope text NOT NULL,amount integer NOT NULL CHECK(amount>=0),currency text NOT NULL DEFAULT 'cad',status text NOT NULL DEFAULT 'draft' CHECK(status IN ('draft','sent','accepted','withdrawn')),created_at timestamptz DEFAULT now(),accepted_at timestamptz);
+CREATE INDEX IF NOT EXISTS booking_slots_time_idx ON booking_slots(starts_at);
+CREATE INDEX IF NOT EXISTS projects_client_idx ON projects(lead_id);
+CREATE INDEX IF NOT EXISTS proposals_client_idx ON proposals(lead_id);
