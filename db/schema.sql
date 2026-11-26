@@ -26,3 +26,24 @@ CREATE TABLE IF NOT EXISTS support_tickets(id uuid PRIMARY KEY,lead_id uuid NOT 
 CREATE INDEX IF NOT EXISTS milestones_project_idx ON milestones(project_id);
 CREATE INDEX IF NOT EXISTS tasks_lead_idx ON client_tasks(lead_id);
 CREATE INDEX IF NOT EXISTS support_lead_idx ON support_tickets(lead_id);
+
+CREATE TABLE IF NOT EXISTS agreements(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),proposal_id uuid NOT NULL REFERENCES proposals(id),title text NOT NULL,terms text NOT NULL,seller text NOT NULL,version integer NOT NULL DEFAULT 1,status text NOT NULL DEFAULT 'sent' CHECK(status IN ('sent','accepted','withdrawn')),accepted_at timestamptz,accepted_name text,created_at timestamptz DEFAULT now(),UNIQUE(proposal_id,version));
+CREATE TABLE IF NOT EXISTS client_messages(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),sender text NOT NULL CHECK(sender IN ('client','operator')),body text NOT NULL,created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS client_requests(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,description text NOT NULL,status text NOT NULL DEFAULT 'new' CHECK(status IN ('new','reviewing','resolved')),created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS client_documents(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,body text NOT NULL,created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS assigned_specialists(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),display_name text NOT NULL,role text NOT NULL,scope text NOT NULL,created_at timestamptz DEFAULT now());
+CREATE TABLE IF NOT EXISTS client_notifications(id uuid PRIMARY KEY,lead_id uuid NOT NULL REFERENCES leads(id),title text NOT NULL,body text NOT NULL,read_at timestamptz,created_at timestamptz DEFAULT now());
+CREATE INDEX IF NOT EXISTS agreements_client_idx ON agreements(lead_id);
+CREATE INDEX IF NOT EXISTS messages_client_idx ON client_messages(lead_id,created_at);
+CREATE INDEX IF NOT EXISTS requests_client_idx ON client_requests(lead_id);
+CREATE INDEX IF NOT EXISTS documents_client_idx ON client_documents(lead_id);
+CREATE INDEX IF NOT EXISTS specialists_client_idx ON assigned_specialists(lead_id);
+CREATE INDEX IF NOT EXISTS notifications_client_idx ON client_notifications(lead_id,created_at);
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS owner text;
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS due_at date;
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS acceptance_criteria text;
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS dependencies text;
+
+CREATE TABLE IF NOT EXISTS acquisition_records(id uuid PRIMARY KEY,kind text NOT NULL CHECK(kind IN ('prospect','partner')),company text NOT NULL,category text NOT NULL,source_url text NOT NULL,signal text NOT NULL,stage text NOT NULL DEFAULT 'discovered' CHECK(stage IN ('discovered','researching','qualified','drafted','contacted','replied','meeting','agreement','active','closed')),owner text NOT NULL,next_action text NOT NULL,next_date date,evidence text,commercial_model text,qualification text,created_at timestamptz DEFAULT now(),UNIQUE(kind,company));
+CREATE TABLE IF NOT EXISTS acquisition_events(id uuid PRIMARY KEY,record_id uuid NOT NULL REFERENCES acquisition_records(id),event_type text NOT NULL CHECK(event_type IN ('research','draft','sent','reply','meeting','agreement','note')),body text NOT NULL,evidence text,created_at timestamptz DEFAULT now());
+CREATE INDEX IF NOT EXISTS acquisition_stage_idx ON acquisition_records(kind,stage,next_date);

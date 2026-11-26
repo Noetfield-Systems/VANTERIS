@@ -29,6 +29,15 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   const deliver=token=>call('/api/delivery',{token});assert.equal((await deliver(t1.data.token)).data.tasks.length,1);assert.equal((await deliver(t2.data.token)).data.tasks.length,0);
   const respond=token=>call('/api/delivery',{method:'POST',token,body:{kind:'task_response',id:task.data.id,response:'CI fixture response'}});assert.equal((await respond(t2.data.token)).status,409);assert.equal((await respond(t1.data.token)).status,200);
   const ticket=await call('/api/delivery',{method:'POST',token:t1.data.token,body:{kind:'ticket',subject:'CI support',body:'CI fixture question'}});assert.equal(ticket.status,201);assert.equal((await deliver(t2.data.token)).data.tickets.length,0);
+  const hub=(token,body)=>call('/api/client-hub',{method:'POST',token,body});
+  const msg=await hub(t1.data.token,{kind:'message',body:'CI private message'});assert.equal(msg.status,201);
+  const hubView=token=>call('/api/client-hub',{token});
+  assert.equal((await hubView(t1.data.token)).data.messages.length,1);assert.equal((await hubView(t2.data.token)).data.messages.length,0);
+  const agreement=await hub(operator,{kind:'agreement',lead_id:a.data.id,proposal_id:proposal.data.id,title:'CI agreement',terms:'CI fixture scope and payment conditions'});assert.equal(agreement.status,201);
+  assert.equal((await hub(t2.data.token,{kind:'accept_agreement',id:agreement.data.id,name:'CI Beta',confirm:true})).status,409);
+  assert.equal((await hub(t1.data.token,{kind:'accept_agreement',id:agreement.data.id,name:'CI Alpha',confirm:true})).status,200);
+  const doc=await hub(operator,{kind:'document',lead_id:a.data.id,title:'CI deliverable',body:'Fixture text document'});assert.equal(doc.status,201);assert.equal((await hubView(t2.data.token)).data.documents.length,0);
+  const ac=await call('/api/acquisition',{token:operator});assert.equal(ac.status,200);assert.equal(ac.data.records.length,45);assert.equal((await call('/api/acquisition',{token:t1.data.token})).status,401);assert.equal((await call('/api/acquisition',{method:'POST',token:operator,body:{action:'event',record_id:ac.data.records[0].id,event_type:'sent',body:'Unverified fixture'}})).status,400);
   assert.equal((await op({kind:'revoke_portal',lead_id:a.data.id})).status,200);assert.equal((await view(t1.data.token)).status,401);
-  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
+  for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/operator/client-hub','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
 });
