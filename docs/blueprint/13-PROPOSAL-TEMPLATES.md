@@ -1,0 +1,2 @@
+# Proposal template
+Client and verified seller; proposal ID, date, validity; background; objective; deliverables; exclusions; client responsibilities; schedule and dependencies; acceptance tests; fee, tax, external cost; payment stages and refund terms; change control; confidentiality; professional specialist boundaries; acceptance mechanism. No guarantee of licence or banking. Template requires applicable legal review before use as binding contract. Record scope version and acceptance timestamp.

@@ -1,0 +1,2 @@
+# Execution register
+Confirmed baseline: PR #1 merged d8b6754f, CI run 45776754905 passed npm install, test and build. V0.4 proposed: service specifications, navigation, resource routes, business reference documents. Pending: hosting and PostgreSQL, real browser QA, payment provider and seller, 200 qualified prospects, 30 verified candidates, substantive jurisdiction dossiers, full authentication, invoice/contract/refund and support workflows. Maintain actual links and status, not completion by page count.

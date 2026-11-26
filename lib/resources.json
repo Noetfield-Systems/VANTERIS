@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "title": "Fintech launch checklist",
+    "body": "Define product, user segment, funds flow, operating countries, provider dependencies, specialist questions, budget, security controls and acceptance tests. Establish a written scope before commissioning work."
+  },
+  {
+    "id": "2",
+    "title": "Banking readiness checklist",
+    "body": "Collect entity details, ownership structure, business activities, customer types, operating countries, expected volumes, source of funds and compliance workflow. Confirm the provider's actual requirements directly."
+  },
+  {
+    "id": "3",
+    "title": "Technology vendor evaluation",
+    "body": "Compare capabilities, API documentation, integration effort, availability, security controls, data handling, commercial terms, portability and support. Test with a sandbox before procurement."
+  },
+  {
+    "id": "4",
+    "title": "Market entry research worksheet",
+    "body": "Record each market, intended activity, official business and regulatory sources, local specialist questions, estimated setup and operating costs, and unresolved evidence."
+  },
+  {
+    "id": "5",
+    "title": "Project acceptance worksheet",
+    "body": "Record deliverable, owner, due date, evidence, acceptance test, exception, client response and handover requirements."
+  }
+]

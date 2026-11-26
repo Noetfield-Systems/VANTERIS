@@ -5,6 +5,25 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: vanteris
+          POSTGRES_PASSWORD: local_ci_only
+          POSTGRES_DB: vanteris_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U vanteris -d vanteris_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgresql://vanteris:local_ci_only@localhost:5432/vanteris_ci
+      OPERATOR_TOKEN: ci-only-operator-token-not-for-production-0001
+      SELLER_LEGAL_NAME: CI Fixture Not A Real Seller
+      COMMERCE_ENABLED: 'false'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -13,3 +32,13 @@ jobs:
       - run: npm install
       - run: npm test
       - run: npm run build
+      - run: npm run migrate
+      - name: Test runtime with isolated PostgreSQL
+        run: |
+          npm start > /tmp/vanteris-ci.log 2>&1 &
+          trap 'cat /tmp/vanteris-ci.log' EXIT
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:3000/api/health; then break; fi
+            sleep 2
+          done
+          node --test tests/runtime.integration.mjs

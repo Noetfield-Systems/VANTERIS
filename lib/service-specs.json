@@ -1,0 +1,402 @@
+{
+  "corporate": {
+    "target": "Founders, cross-border SMEs",
+    "problem": "Unclear legal entity and operating dependencies",
+    "deliverable": "Entity type comparison; incorporation task list; specialist brief",
+    "inputs": "Ownership, operations, target markets, management",
+    "specialist": "Local corporate lawyer/provider",
+    "timeline": "3–7 business days",
+    "pricing": "Fixed research fee; third-party quote",
+    "external": "Registry fees, registered office, counsel",
+    "upsell": "Expansion, banking",
+    "acceptance": "Evidence-linked comparison and named outstanding questions",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "expansion": {
+    "target": "Operating SMEs and fintechs",
+    "problem": "Unclear entry sequence and local dependencies",
+    "deliverable": "Entry plan; risk register; operating cost assumptions",
+    "inputs": "Current operations, target market, volumes",
+    "specialist": "Local corporate and tax advisers",
+    "timeline": "5–10 days",
+    "pricing": "Fixed scope",
+    "external": "Local counsel, filings",
+    "upsell": "Market research, operations",
+    "acceptance": "Prioritized roadmap with owners",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "fintech": {
+    "target": "Fintech founders",
+    "problem": "Unsequenced product, regulatory and funding dependencies",
+    "deliverable": "Business launch roadmap; funds-flow diagram; backlog",
+    "inputs": "Product, target users, geography, budget",
+    "specialist": "Fintech architect; counsel separately",
+    "timeline": "5 days",
+    "pricing": "CAD 750 initial roadmap",
+    "external": "Specialist opinions, vendor fees",
+    "upsell": "Architecture, engineering",
+    "acceptance": "Scope, sequence and dependencies agreed",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "regulatory": {
+    "target": "Financial product founders",
+    "problem": "Unclear licensing questions",
+    "deliverable": "Source register; activity map; questions for counsel",
+    "inputs": "Activities, custody, funds flow, jurisdictions",
+    "specialist": "Qualified local counsel",
+    "timeline": "5–10 days",
+    "pricing": "Research fee plus specialist quote",
+    "external": "Legal fees, application fees",
+    "upsell": "Corporate, AML",
+    "acceptance": "Primary sources with dates; no legal conclusion",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "banking": {
+    "target": "International businesses",
+    "problem": "Incomplete provider readiness information",
+    "deliverable": "Readiness checklist; evidence gaps; provider criteria",
+    "inputs": "Entity, activity, ownership, volumes, markets",
+    "specialist": "Bank/EMI onboarding team",
+    "timeline": "3–7 days",
+    "pricing": "Fixed research scope",
+    "external": "Provider and specialist charges",
+    "upsell": "Payments, AML",
+    "acceptance": "Requirements mapped; no approval guarantee",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "payments": {
+    "target": "PSPs, merchants, fintechs",
+    "problem": "Fragmented payment architecture",
+    "deliverable": "Funds-flow design; vendor matrix; integration plan",
+    "inputs": "Currencies, transaction volumes, settlement needs",
+    "specialist": "Payment engineer; licensed providers",
+    "timeline": "5–10 days",
+    "pricing": "Fixed scope or implementation",
+    "external": "PSP processing and FX fees",
+    "upsell": "Engineering, AML",
+    "acceptance": "Documented flow and failure modes",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "crypto": {
+    "target": "Wallet and crypto founders",
+    "problem": "Unclear custody and operational dependencies",
+    "deliverable": "Wallet/custody architecture; launch backlog",
+    "inputs": "Assets, custody model, users, markets",
+    "specialist": "Blockchain architect; counsel",
+    "timeline": "5–10 days",
+    "pricing": "Fixed scope",
+    "external": "Network, custody, legal fees",
+    "upsell": "Exchange, AML",
+    "acceptance": "Threat model and integration dependencies",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "forex": {
+    "target": "Brokerage founders",
+    "problem": "Complex platform and liquidity selection",
+    "deliverable": "Technology requirements; liquidity integration matrix",
+    "inputs": "Instruments, markets, trading model",
+    "specialist": "Brokerage engineer; licensed vendors",
+    "timeline": "5–10 days",
+    "pricing": "Milestone quote",
+    "external": "Platform, feeds, liquidity",
+    "upsell": "Payments, operations",
+    "acceptance": "Requirements and test scenarios",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "exchange": {
+    "target": "Exchange operators",
+    "problem": "Matching, custody and ledger complexity",
+    "deliverable": "Matching/ledger architecture; reconciliation test plan",
+    "inputs": "Assets, order types, volumes, custody",
+    "specialist": "Exchange architect",
+    "timeline": "5–10 days",
+    "pricing": "CAD 950 assessment or quote",
+    "external": "Vendor, infrastructure, custody",
+    "upsell": "Engineering, AML",
+    "acceptance": "Ledger invariants and test criteria",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "neobank": {
+    "target": "Digital banking teams",
+    "problem": "Ledger and provider orchestration complexity",
+    "deliverable": "System architecture; onboarding flows; integration boundaries",
+    "inputs": "Products, user types, funds flow",
+    "specialist": "Banking engineer; licensed providers",
+    "timeline": "5–10 days",
+    "pricing": "Milestone quote",
+    "external": "Banking partner, processor",
+    "upsell": "Payments, AML",
+    "acceptance": "Clear service boundaries and control map",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "rwa": {
+    "target": "Tokenization teams",
+    "problem": "Unclear asset lifecycle and technology feasibility",
+    "deliverable": "Asset lifecycle and technical feasibility study",
+    "inputs": "Asset type, rights, transfer rules, jurisdictions",
+    "specialist": "Token engineer; qualified counsel",
+    "timeline": "5–10 days",
+    "pricing": "Fixed research fee",
+    "external": "Legal, audit, custody",
+    "upsell": "Engineering, regulatory",
+    "acceptance": "Lifecycle design and unresolved legal questions",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "gaming": {
+    "target": "Gaming operators",
+    "problem": "Platform and payment dependencies",
+    "deliverable": "Technical requirements; jurisdiction research brief",
+    "inputs": "Game mechanics, markets, payment flow",
+    "specialist": "Gaming specialists; counsel",
+    "timeline": "5–10 days",
+    "pricing": "Fixed scope",
+    "external": "Licensing and platform fees",
+    "upsell": "Payments, engineering",
+    "acceptance": "Technology scope and specialist handoff",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "aml": {
+    "target": "Fintech operations teams",
+    "problem": "Manual identity and monitoring workflows",
+    "deliverable": "Vendor matrix; onboarding and review workflow",
+    "inputs": "Risk categories, geography, transaction flows",
+    "specialist": "Compliance professional; integration engineer",
+    "timeline": "5–10 days",
+    "pricing": "Fixed assessment",
+    "external": "Vendor usage, compliance review",
+    "upsell": "Payments, engineering",
+    "acceptance": "Testable workflow; no compliance certification",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "ma": {
+    "target": "Business buyers and sellers",
+    "problem": "Fragmented diligence information",
+    "deliverable": "Public research and diligence request list",
+    "inputs": "Target, transaction objectives, available records",
+    "specialist": "Qualified transaction counsel/accountant",
+    "timeline": "5–10 days",
+    "pricing": "Fixed research scope",
+    "external": "Legal, valuation, audit",
+    "upsell": "Modeling, corporate",
+    "acceptance": "Evidence and diligence gaps",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "ip": {
+    "target": "Technology companies",
+    "problem": "Incomplete IP inventory",
+    "deliverable": "Asset inventory; counsel briefing",
+    "inputs": "Brands, code ownership, domains, agreements",
+    "specialist": "IP counsel",
+    "timeline": "3–5 days",
+    "pricing": "Fixed coordination fee",
+    "external": "Search, filing, counsel",
+    "upsell": "Corporate, expansion",
+    "acceptance": "Inventory and evidence gaps",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "market": {
+    "target": "Cross-border founders",
+    "problem": "Weak target-market comparison",
+    "deliverable": "Two-market comparison; sources and next steps",
+    "inputs": "Target customer, budget, markets",
+    "specialist": "Research analyst",
+    "timeline": "4 days",
+    "pricing": "CAD 550 initial scope",
+    "external": "Paid data or local specialists",
+    "upsell": "Expansion, corporate",
+    "acceptance": "Source-linked comparison",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "model": {
+    "target": "Founders and operators",
+    "problem": "Unclear unit economics and runway",
+    "deliverable": "Scenario model; assumptions; sensitivity",
+    "inputs": "Revenue, variable cost, headcount, financing",
+    "specialist": "Financial analyst; accountant if needed",
+    "timeline": "5–10 days",
+    "pricing": "Fixed scope",
+    "external": "Accounting or specialist review",
+    "upsell": "Roadmap, operations",
+    "acceptance": "Editable model and reconciled assumptions",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "engineering": {
+    "target": "Fintech product teams",
+    "problem": "Missing implementation capacity",
+    "deliverable": "Agreed software, documentation and tests",
+    "inputs": "Requirements, access, security constraints",
+    "specialist": "Software engineer",
+    "timeline": "Milestone-dependent",
+    "pricing": "Fixed milestone or time and materials",
+    "external": "Cloud, APIs, licenses",
+    "upsell": "Managed operations",
+    "acceptance": "Acceptance tests and handover",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "operations": {
+    "target": "Operating businesses",
+    "problem": "Unowned operational tasks",
+    "deliverable": "Milestone tracker; delivery reviews; runbook",
+    "inputs": "Workload, service scope, dependencies",
+    "specialist": "Project manager; specialists",
+    "timeline": "Monthly",
+    "pricing": "Retainer with capacity limits",
+    "external": "External service fees",
+    "upsell": "Enterprise advisory",
+    "acceptance": "Tracked completion and exceptions",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  },
+  "enterprise": {
+    "target": "Financial institutions",
+    "problem": "Complex multi-vendor delivery",
+    "deliverable": "Program scope; governance and dependency map",
+    "inputs": "Stakeholders, architecture, constraints",
+    "specialist": "Program lead and technical specialists",
+    "timeline": "2–4 weeks discovery",
+    "pricing": "Custom proposal",
+    "external": "Vendor and specialist costs",
+    "upsell": "Engineering, operations",
+    "acceptance": "Signed scope and measurable milestones",
+    "process": [
+      "Discovery and data inventory",
+      "Written scope, exclusions and fees",
+      "Research or technical delivery",
+      "Review against acceptance criteria",
+      "Handover and follow-up"
+    ],
+    "contract": "Written scope, seller identity, payment and refund terms, change control, confidentiality, acceptance and exclusions. Reserved work separately agreed with qualified providers."
+  }
+}
