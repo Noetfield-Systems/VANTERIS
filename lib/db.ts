@@ -1,1 +1,1 @@
-import {Pool} from 'pg';let pool:Pool|undefined;export function db(){if(!process.env.DATABASE_URL)throw Error('Database not configured');return pool??=new Pool({connectionString:process.env.DATABASE_URL,max:5,connectionTimeoutMillis:5000})}
+import {Pool} from 'pg';let pool:Pool|undefined;export function db(){const url=process.env.DATABASE_URL||process.env.POSTGRES_URL||process.env.DATABASE_URL_UNPOOLED;if(!url)throw Error('Database not configured');return pool??=new Pool({connectionString:url,max:3,connectionTimeoutMillis:5000,idleTimeoutMillis:15000})}
