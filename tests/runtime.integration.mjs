@@ -37,6 +37,7 @@ test('live HTTP and isolated database: lead, booking conflict, portal isolation,
   assert.equal((await hub(t2.data.token,{kind:'accept_agreement',id:agreement.data.id,name:'CI Beta',confirm:true})).status,409);
   assert.equal((await hub(t1.data.token,{kind:'accept_agreement',id:agreement.data.id,name:'CI Alpha',confirm:true})).status,200);
   const doc=await hub(operator,{kind:'document',lead_id:a.data.id,title:'CI deliverable',body:'Fixture text document'});assert.equal(doc.status,201);assert.equal((await hubView(t2.data.token)).data.documents.length,0);
+  const ac=await call('/api/acquisition',{token:operator});assert.equal(ac.status,200);assert.equal(ac.data.records.length,45);assert.equal((await call('/api/acquisition',{token:t1.data.token})).status,401);assert.equal((await call('/api/acquisition',{method:'POST',token:operator,body:{action:'event',record_id:ac.data.records[0].id,event_type:'sent',body:'Unverified fixture'}})).status,400);
   assert.equal((await op({kind:'revoke_portal',lead_id:a.data.id})).status,200);assert.equal((await view(t1.data.token)).status,401);
   for(const path of ['/','/services','/services/fintech','/industries/0','/booking','/portal','/resources/1','/api/resources/1','/operator/finance','/jurisdictions/canada','/operator/delivery','/operator/client-hub','/robots.txt']){const r=await fetch(base+path);assert.equal(r.status,200,path);await r.arrayBuffer()}
 });

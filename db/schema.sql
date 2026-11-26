@@ -43,3 +43,7 @@ ALTER TABLE projects ADD COLUMN IF NOT EXISTS owner text;
 ALTER TABLE projects ADD COLUMN IF NOT EXISTS due_at date;
 ALTER TABLE projects ADD COLUMN IF NOT EXISTS acceptance_criteria text;
 ALTER TABLE projects ADD COLUMN IF NOT EXISTS dependencies text;
+
+CREATE TABLE IF NOT EXISTS acquisition_records(id uuid PRIMARY KEY,kind text NOT NULL CHECK(kind IN ('prospect','partner')),company text NOT NULL,category text NOT NULL,source_url text NOT NULL,signal text NOT NULL,stage text NOT NULL DEFAULT 'discovered' CHECK(stage IN ('discovered','researching','qualified','drafted','contacted','replied','meeting','agreement','active','closed')),owner text NOT NULL,next_action text NOT NULL,next_date date,evidence text,commercial_model text,qualification text,created_at timestamptz DEFAULT now(),UNIQUE(kind,company));
+CREATE TABLE IF NOT EXISTS acquisition_events(id uuid PRIMARY KEY,record_id uuid NOT NULL REFERENCES acquisition_records(id),event_type text NOT NULL CHECK(event_type IN ('research','draft','sent','reply','meeting','agreement','note')),body text NOT NULL,evidence text,created_at timestamptz DEFAULT now());
+CREATE INDEX IF NOT EXISTS acquisition_stage_idx ON acquisition_records(kind,stage,next_date);
