@@ -1,0 +1,2 @@
+# Discovery questionnaire
+Company and role; target users; current stage; intended activity; countries; expected funds/asset flows; custody/control; revenue model; product stack; providers; current evidence; timeline; budget; team; dependencies; specialist advice obtained; intended deliverable; acceptance criteria; external costs; preferred communications. Do not request secrets, passports or sensitive financial documents in public intake. Record unknowns and next step. Confirm feasibility and scope before payment.

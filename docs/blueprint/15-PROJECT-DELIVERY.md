@@ -1,0 +1,2 @@
+# Delivery handbook
+Create project from accepted scope; owner and milestones; baseline acceptance and constraints; weekly review; record versioned artifacts and source receipts. Verify deliverables independently where practical. Block only affected task on external dependency; continue independent tasks. Client review → defect correction → acceptance evidence → handover and support. Track cost and cash separately. Never record delivered merely because a file exists.

@@ -1,0 +1,2 @@
+# Support and incidents
+Classify P0 data/payment exposure, P1 unavailable core path, P2 defect, P3 request. Capture time, reporter, affected system, evidence, owner and next update. Contain exposure, preserve evidence, restore service, verify and document root cause. Notify affected parties and authorities as applicable after factual assessment. Do not publish client details in public issues. Targets: P0 immediate triage during staffed availability; no unverified 24/7 promise.

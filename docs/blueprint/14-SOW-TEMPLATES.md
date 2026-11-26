@@ -1,0 +1,2 @@
+# Statement of work template
+Engagement ID; parties; scope; milestone table (owner, deliverable, due date, acceptance evidence, amount); excluded activities; inputs and access; change request process; review window; support and handover; termination and refund terms; data access and retention; IP and confidentiality; dispute and governing-law clauses for qualified legal review. Record written signatures or valid acceptance mechanism.
