@@ -1,0 +1,4 @@
+# Photography register
+- Leon Rohrwild, modern skyscraper glass facade and office interior: https://unsplash.com/photos/a-modern-skyscrapers-glass-facade-and-office-interior-SVNqxZlv9CM — image https://images.unsplash.com/photo-1752316435441-f020560fba53
+- David Kristianto, modern conference room: https://unsplash.com/photos/modern-conference-room-with-chairs-and-table-6jpbs2ykacU — image https://images.unsplash.com/photo-1760611656160-7c7bf7e6da9f
+Both source pages displayed Free to use under Unsplash License on 2026-11-26: https://unsplash.com/license. Used as illustrative architecture/interior only, not an assertion of VANTERIS premises or endorsement. Third-party image delivery and crop still need browser verification; fallback backgrounds included.
