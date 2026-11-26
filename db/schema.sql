@@ -13,3 +13,9 @@ CREATE TABLE IF NOT EXISTS proposals(id uuid PRIMARY KEY,lead_id uuid NOT NULL R
 CREATE INDEX IF NOT EXISTS booking_slots_time_idx ON booking_slots(starts_at);
 CREATE INDEX IF NOT EXISTS projects_client_idx ON projects(lead_id);
 CREATE INDEX IF NOT EXISTS proposals_client_idx ON proposals(lead_id);
+
+CREATE TABLE IF NOT EXISTS invoices(id uuid PRIMARY KEY,proposal_id uuid NOT NULL REFERENCES proposals(id),lead_id uuid NOT NULL REFERENCES leads(id),amount integer NOT NULL CHECK(amount>0),currency text NOT NULL DEFAULT 'cad',description text NOT NULL,seller text NOT NULL,status text NOT NULL DEFAULT 'issued' CHECK(status IN ('issued','paid','void')),created_at timestamptz DEFAULT now(),paid_at timestamptz);
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS invoice_id uuid REFERENCES invoices(id);
+CREATE UNIQUE INDEX IF NOT EXISTS orders_invoice_once ON orders(invoice_id) WHERE invoice_id IS NOT NULL;
+CREATE TABLE IF NOT EXISTS intelligence(id uuid PRIMARY KEY,title text NOT NULL,source_url text NOT NULL,publisher text NOT NULL,published_at date,retrieved_at timestamptz DEFAULT now(),verification text NOT NULL CHECK(verification IN ('unreviewed','verified','rejected')),category text NOT NULL,market text NOT NULL,summary text NOT NULL,next_action text NOT NULL,owner text NOT NULL);
+CREATE TABLE IF NOT EXISTS expenses(id uuid PRIMARY KEY,project_id uuid REFERENCES projects(id),category text NOT NULL CHECK(category IN ('internal','external')),amount integer NOT NULL CHECK(amount>0),currency text NOT NULL DEFAULT 'cad',description text NOT NULL,evidence text NOT NULL,incurred_at date NOT NULL,created_at timestamptz DEFAULT now());
